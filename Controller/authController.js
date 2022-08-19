@@ -60,7 +60,7 @@ router.post('/login',(req,res)=>{
 //userInfo
 router.get('/userInfo', (req,res)=>{
     let token = req.headers['x-access-token']
-    console.log("toekn:"+ token)
+    console.log("token:"+ token)
     if(!token) res.send({auth: false, token: 'No token provided'})
     //jwt verify token
     jwt.verify(token,config.secret,(err,user)=>{
