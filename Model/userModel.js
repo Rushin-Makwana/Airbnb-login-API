@@ -5,7 +5,6 @@ name: String,
 email: String,
 password: String,
 phone: String,
-role: String
 })
 mongoose.model('users', userSchema)({
     fields:userSchema.Type
