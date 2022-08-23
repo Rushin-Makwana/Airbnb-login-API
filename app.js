@@ -3,7 +3,7 @@ const app = express();
 const superagent = require('superagent');
 const request = require('request');
 const bodyParser = require('body-parser');
-const port = 9800;
+const port = process.env.PORT;
 const cors = require('cors')
 
 app.use(bodyParser.urlencoded({extended:true}));
