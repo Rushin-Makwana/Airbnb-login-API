@@ -6,12 +6,10 @@ const bcryptjs = require('bcryptjs')
 const config = require('../config')
 const User = require('../Model/userModel');
 const e = require('express');
-const mongoose = require('mongoose')
 
 
 router.use(bodyParser.urlencoded({extended:true}))
 router.use(bodyParser.json())
-mongoose.set('strictQuery', false)
 //get all users
 router.get('/users', (req,res)=>{
     User.find({}, (err,data)=>{
